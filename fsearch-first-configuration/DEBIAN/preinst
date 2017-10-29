@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+package_name=fsearch-first-configuration
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/bin/fsearch.distrib" --rename "/usr/bin/fsearch"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/usr/bin/fsearch")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/bin/fsearch.distrib" --rename "/usr/bin/fsearch"
+fi
+;;
+esac
+exit 0

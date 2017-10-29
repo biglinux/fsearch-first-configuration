@@ -1,0 +1,5 @@
+6062553ed0d4d2d61827efbc976bf231  DEBIAN/control
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+dccfe201d780b9ec7635511d3872169f  DEBIAN/postrm
+4ff842b473983a6ca0752d3eb10795ce  DEBIAN/preinst
+e296bca6a90a7d43a69625f41d6f2acb  usr/bin/fsearch
